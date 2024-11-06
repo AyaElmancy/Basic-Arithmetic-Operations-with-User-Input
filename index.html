@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+function getNumber(promptMessage) {
+    let num;
+    do {
+        num = parseFloat(prompt(promptMessage));
+    } while (isNaN(num));
+    return num;
+}
+let num1 = getNumber("Enter the first number:");
+let num2 = getNumber("Enter the second number:");
+let num3 = getNumber("Enter the third number:");
+let sum = num1 + num2 + num3;
+let product = num1 * num2 * num3;
+let division1 = num1 / num2;
+let division2 = num2 / num3;
+let division3 = num1 / num3;
+let output = `
+Results:
+1. Addition of ${num1}, ${num2}, and ${num3} is ${sum}.
+2. Multiplication of ${num1}, ${num2}, and ${num3} is ${product}.
+3. Division of ${num1} by ${num2} is ${division1.toFixed(2)}.
+4. Division of ${num2} by ${num3} is ${division2.toFixed(2)}.
+5. Division of ${num1} by ${num3} is ${division3.toFixed(2)}.
+`;
+alert(output);
+</script>
+</body>
+</html>
